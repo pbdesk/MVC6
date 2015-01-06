@@ -16,7 +16,9 @@ namespace ToDoDemo.Models
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     {
         private static bool _created = false;
-        
+
+        public DbSet<TodoItem> TodoItems { get; set; }
+
         public ApplicationDbContext()
         {            
             // Create the database and schema if it doesn't exist

@@ -7,9 +7,25 @@ using ToDoDemo.Models;
 namespace ToDoDemo.Migrations
 {
     [ContextType(typeof(ApplicationDbContext))]
-    public class ApplicationDbContextModelSnapshot : ModelSnapshot
+    public partial class initial : IMigrationMetadata
     {
-        public override IModel Model
+        string IMigrationMetadata.MigrationId
+        {
+            get
+            {
+                return "201501061917101_initial";
+            }
+        }
+        
+        string IMigrationMetadata.ProductVersion
+        {
+            get
+            {
+                return "7.0.0-beta1-11518";
+            }
+        }
+        
+        IModel IMigrationMetadata.TargetModel
         {
             get
             {
